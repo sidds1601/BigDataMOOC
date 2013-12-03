@@ -1,0 +1,142 @@
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS-IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# FIXME: You can use this configuration file to customize Course Builder
+# for a specific course. More information on YAML can be found at:
+#
+#     http://www.yaml.org/spec/1.2/spec.html#id2759963
+#
+# Note that the values in this file can contain arbitrary HTML.
+
+############################
+# General course information
+############################
+
+course:
+  # A new line or a space separated list of email addresses of course
+  # administrative users. Each email address must be placed between '[' and ']',
+  # for example: '[test@example.com]'. Regular expressions are not supported,
+  # exact match only.
+  admin_user_emails: ''
+
+  # Course title
+  title: 'Big Data Applications and Analytics MOOC'
+
+  # Main page blurb. (The '|' at the beginning enables multi-line input.)
+  blurb: |
+    The Big Data and X-Informatics course is designed as an overview course for a Data Science Curriculum. The courses covers a mix of applications (the X in X-Informatics) and technologies needed to support the field electronically i.e. to process the application data. Built around rallying cry: Use Clouds running Data Analytics Collaboratively processing Big Data to solve problems in X-Informatics. The technologies give an overview of clouds and  discuss some of the data analytics. The X-Informatics describes the application and its data.
+    </br></br><b>The Course Structure</b></br>
+    The current course is set up as a MOOC (massive open online course) with 25 units where a  unit is from 30-90 minutes of instruction. There is an additional motivation unit to explain why topic of course is important. Each unit is broken up into lessons which are from 5-15 minutes in length. Some units involve software as indicated.
+
+  # Information about the instructor to display on the main page.
+  instructor_details: ''
+
+  # You can choose whether you want a video or an image on the main page.
+  # If you specify both a video and an image link, then the video will take
+  # priority. The image alt text allows the image to be understood by text-only
+  # screen readers.
+  main_video:
+    url: //www.youtube.com/embed/wPcOwLYZfks?rel=0
+  main_image:
+    url: /assets/img/banner1.png
+    alt_text: ''
+
+  # Course start date.
+  start_date: ''
+
+  # Forum URL. For details, see
+  #
+  #     http://code.google.com/p/course-builder/wiki/WebForums.
+  forum_email: My-Course@googlegroups.com
+  forum_url: https://groups.google.com/group/My-Course
+
+  # Forum embedding URL. This link is used to embed the forum in an iframe on
+  # the forum.html page. Set this value to False if you don't use forum and/or
+  # to remove the Forum link from the student navigation bar.
+  forum_embed_url: ''
+
+  # URL for the mailing list where students can register to receive course
+  # announcements. For details, see
+  #
+  #     http://code.google.com/p/course-builder/wiki/CreateEmailList
+  announcement_list_email: ''
+  announcement_list_url: ''
+
+  # Locale for internationalization. See modules/i18n/resources/locale for
+  # available locales.
+  locale: 'en_US'
+
+  # Whether the course material can be accessed without requiring users to log
+  # in or register.
+  browsable: false
+
+########################
+# Course preview page
+########################
+
+preview:
+  # HTML to be included in the course preview page.
+  after_top_content_ends: ''
+  after_main_content_ends: ''
+
+
+##########################
+# Course registration form
+##########################
+
+reg_form:
+  # Header text for the course registration form.
+  header_text: |
+    Welcome!  Please answer the following question, and you will be
+    enrolled in the course.
+
+  # HTML representing additional fields to include in the course
+  # registration form, in addition to the student's name. These should
+  # be wrapped in <li></li> tags.
+  additional_registration_fields: ''
+
+  # Whether to allow new students to register for the course.
+  can_register: True
+
+
+##############################
+# Assessment confirmation page
+##############################
+
+# HTML to be displayed on the final assessment's confirmation page (which is
+# displayed when the student has completed the final assessment). You can
+# optionally add code here to load or generate a Certificate of Completion
+# image. Note that the result text includes a '%s', which will be substituted
+# with the student's actual score. ('%%' results in a single '%'.)
+assessment_confirmations:
+  result_text:
+    pass: |
+      Based on your overall course score of %s%%, you have passed the course.
+      Congratulations!
+    fail: |
+      Unfortunately, based on your overall course score of %s%%, you did not
+      receive a sufficiently high score to obtain a certificate of completion.
+      We encourage you to review the lessons noted and to attempt the
+      assessment again before it closes. Certificate or not, we hope you
+      enjoyed taking the course and learned new skills!
+
+
+########################
+# Units and lessons page
+########################
+
+unit:
+  # HTML to be included in the course unit/lesson pages.
+  after_leftnav_begins: '<!-- unit.after_leftnav_begins -->'
+  before_leftnav_ends: '<!-- unit.before_leftnav_ends -->'
+  after_content_begins: '<!-- unit.after_content_begins -->'
+  before_content_ends: '<!-- unit.before_content_ends -->'

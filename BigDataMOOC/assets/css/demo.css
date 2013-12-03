@@ -1,0 +1,145 @@
+/* Demo CSS - You do not need this css in your own slider */
+
+body{
+	/*font-family: "Open Sans", helvetica, arial;*/
+}
+
+.slider-unit-numbers{
+font-size: 11px;
+margin-top: -16px;
+font-style: italic;
+margin-bottom: -7px;
+}
+
+.citation{
+	width:200px;
+	height:50px;
+	position:absolute;
+	top:370px;
+	margin-left:115px;
+	Z-index:222;
+	color:#CDCDCD;
+
+}
+
+.section_description
+{
+	width:243px;
+	height:395px;
+	position:absolute;
+	left:720px;
+	top:0px;
+	background-color:rgba(0,0,0,0.8);
+	Z-index:222;
+}
+
+.section_description a:link{color:#fff;}
+.section_description a:visited {color:#fff;}
+.section_description a:hover {color:orange;}
+.slider-data-science-link {text-decoration:underline;}
+
+
+pre{
+/*	font-family: "Source Code Pro", monospace;
+*/	display: block;
+	padding: 9.5px;
+	margin: 0 0 10px;
+	font-size: 13px;
+	line-height: 20px;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	background-color: whiteSmoke;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+h2{
+	margin-left:20px;
+	font-size: 25px;
+	color:rgba(255,255,255,1);
+}
+
+p{
+	font-size:14px;
+	margin-left:20px;
+	margin-right:20px;
+	color:rgba(255,255,255,1);
+	}
+	
+pre + h2{
+	margin-top: 80px;
+}
+
+#container{
+	max-width:1024px;
+	margin:0 auto;
+/*	padding-bottom:80px;
+*/}
+
+#banner-fade,
+#banner-slide{
+	float: left;
+/*	margin-bottom: 60px;
+*/}
+
+ul.bjqs-controls.v-centered li a{
+	display:block;
+	padding:10px;;
+	text-decoration: none;
+}
+
+ul.bjqs-controls.v-centered li a:hover{
+}
+
+ol.bjqs-markers li a{
+	padding:5px 10px;
+	background:#000;
+	color:#fff;
+	margin:5px;
+	text-decoration: none;
+}
+
+ol.bjqs-markers li.active-marker a,
+ol.bjqs-markers li a:hover{
+	background: #999;
+}
+
+p.bjqs-caption{
+	background: rgba(255,255,255,0.5);
+}
+
+
+
+/*carousel new demo.css
+*/
+
+/* General Demo Style */
+.gcb-cols #ca-container {
+	color:white;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+	font-size:12px;
+}
+#ca-container a{
+/*	color:#000;
+*/	text-decoration:none;
+}
+#ca-container .clr{
+	clear:both;
+}
+#ca-container h5{
+	margin:15px;
+	font-size:44px;
+	color:#000;
+	font-family: 'Rochester', sans-serif;
+	text-shadow:1px 1px 1px #fff;
+	text-align:center;
+}
+#ca-container h5{
+	font-size:20px;
+	display:block;
+	color:#60817a;
+}

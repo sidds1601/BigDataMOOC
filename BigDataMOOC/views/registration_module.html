@@ -1,0 +1,17 @@
+{% if can_register %}
+  <div class="enroll-div">
+    <center>
+      {% if show_registration_page %}
+        <a class="gcb-button-large" href="register" role="button"><img src="/assets/img/Enroll_Button.png" /></a>
+      {% else %}
+      <!--
+        <form action='register' method='post'>
+          <input type="hidden" name="xsrf_token" value="{{ register_xsrf_token|escape }}">
+          <input type="hidden" name="name_from_profile">
+          <button class="gcb-button-large no-border-bk" type="submit"><img src="/assets/img/Enroll_Button.png" /></button>
+        </form>
+        -->
+      {% endif %}
+    </center>
+  </div>
+{% endif %}

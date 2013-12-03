@@ -1,0 +1,25 @@
+INFO     2013-08-15 03:21:36,445 sdk_update_checker.py:244] Checking for updates to the SDK.
+WARNING  2013-08-15 03:21:36,611 api_server.py:314] Could not initialize images API; you are likely missing the Python "PIL" module.
+INFO     2013-08-15 03:21:36,613 api_server.py:138] Starting API server at: http://localhost:42595
+INFO     2013-08-15 03:21:36,617 api_server.py:509] Applying all pending transactions and saving the datastore
+INFO     2013-08-15 03:21:36,617 api_server.py:512] Saving search indexes
+Traceback (most recent call last):
+  File "/home/smaini/google_appengine/dev_appserver.py", line 182, in <module>
+    _run_file(__file__, globals())
+  File "/home/smaini/google_appengine/dev_appserver.py", line 178, in _run_file
+    execfile(script_path, globals_)
+  File "/home/smaini/google_appengine/google/appengine/tools/devappserver2/devappserver2.py", line 695, in <module>
+    main()
+  File "/home/smaini/google_appengine/google/appengine/tools/devappserver2/devappserver2.py", line 688, in main
+    dev_server.start(options)
+  File "/home/smaini/google_appengine/google/appengine/tools/devappserver2/devappserver2.py", line 663, in start
+    self._dispatcher.start(apis.port, request_data)
+  File "/home/smaini/google_appengine/google/appengine/tools/devappserver2/dispatcher.py", line 161, in start
+    servr.start()
+  File "/home/smaini/google_appengine/google/appengine/tools/devappserver2/server.py", line 933, in start
+    self._balanced_server.start()
+  File "/home/smaini/google_appengine/google/appengine/tools/devappserver2/wsgi_server.py", line 292, in start
+    self._start_all_fixed_port(host_ports)
+  File "/home/smaini/google_appengine/google/appengine/tools/devappserver2/wsgi_server.py", line 329, in _start_all_fixed_port
+    raise BindError('Unable to bind %s:%s' % self.bind_addr)
+google.appengine.tools.devappserver2.wsgi_server.BindError: Unable to bind 156.56.104.10:8080

@@ -1,0 +1,29 @@
+{% macro display(readonly_assessment) -%}
+    <div>{{readonly_assessment['preamble'] | safe}}</div>
+    <ol>
+    {% for q in readonly_assessment['questionsList'] %}
+    	{% set outer_loop = loop %}
+    	<li>
+    	{{ q['questionHTML'] | safe }}
+    	<br>
+	    {% if q['choices'] %}
+    		{% for choice in q['choices'] %}
+                <input type="radio" disabled="true" id="readonly-{{outer_loop.index0}}-{{loop.index0}}"{% if loop.index0 == readonly_assessment['answers'][outer_loop.index0] %}checked="true"{% endif %}>&nbsp;
+                <label class="student-answer" for="readonly-{{outer_loop.index0}}-{{loop.index0}}">{{ choice }}</label>
+    		{% endfor %}
+	    {% else %}
+    		{% if readonly_assessment['answers'][outer_loop.index0][0:33] == "https://docs.google.com/document/" %}
+		    	<b>Answer:</b>
+			    <br>
+			    <p class="student-answer"><a href="{{ readonly_assessment['answers'][outer_loop.index0] }}" target="_blank">{{ readonly_assessment['answers'][outer_loop.index0] }}</a></p>
+		    {% else %}
+			    <b>Answer:</b>
+			    <br>
+			    <p class="student-answer">{{ readonly_assessment['answers'][outer_loop.index0] }}</p>
+		    {% endif %}
+	    {% endif %}
+    	<br><br>
+	    </li>
+    {% endfor %}
+    </ol>
+{%- endmacro %}
